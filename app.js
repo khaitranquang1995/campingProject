@@ -9,7 +9,10 @@ var express         = require("express"),
     LocalStrategy   = require("passport-local");
     
     
-mongoose.connect('mongodb://localhost:27017/yelp_camp', { useNewUrlParser: true });
+// mongoose.connect('mongodb://localhost:27017/yelp_camp', { useNewUrlParser: true });
+mongoose.connect("mongodb+srv://khaitran1995:Thao2507@cluster0-cvhnq.mongodb.net/test?retryWrites=true", { 
+    useNewUrlParser: true });
+
 app.use(bodyParser.urlencoded({extended: true}))
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
@@ -68,5 +71,5 @@ app.use("/campgrounds/:id/comments", commentRoutes);
 //Tell Express to listen for requests (star server)
 //=================================================
 app.listen(process.env.PORT, process.env.IP, function(){
-      console.log("Server has started!"); 
+      console.log("Server Connected!"); 
 });
