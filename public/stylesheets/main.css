@@ -10,6 +10,20 @@
     padding: 9px;
 }
 
+#img-in-thumbnail {
+    object-fit: cover;
+    height: 250px;
+    width: 100%;
+}
+
+@media (min-width: 992px) {
+    #img-in-thumbnail {
+        object-fit: cover;
+        height: 250px;
+        width: 100%;
+    }
+}
+
 body {
     background-color: none;
 }
@@ -20,4 +34,9 @@ body {
 
 #commentDeleteForm{
     display: inline;
+}
+
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
 }
